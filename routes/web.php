@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+/* Route::get('/', function () {
+    return "Hola perrito, estas en el Home";
+}); */
 
-Route::get('/', function () {
-    /*  return view('welcome'); */
-    return "Hola perrito";
-});
+Route::get('/', HomeController::class);
 
 Route::get('/cursos', function () {
     return "Bienvenido a la pagina de cursos";
@@ -16,10 +17,14 @@ Route::get('/cursos/create', function () {
 });
 
 Route::get('/cursos/{curso}', function ($curso) {
-    return "Bienvenido al curso : $curso";
-});
+        return "Bienvenido al curso : $curso";
+    });
 
-
-Route::get('/cursos/{curso}/{categoria}', function ($curso,$categoria) {
-    return "Bienvenido al curso : $curso, de la categoria: $categoria";
-});
+/* Con el signo de interrogación decimos que esa prop puede ser opcional */
+/* Route::get('/cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
+    if ($categoria) {
+        return "Bienvenido al curso : $curso, de la categoria: $categoria";
+    } else {
+        return "Bienvenido al curso : $curso";
+    }
+}); */
