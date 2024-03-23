@@ -12,6 +12,6 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        return "Hola perrito, estas en el Home";
+        return view("home");
     }
 }
