@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+/* El método invoker es para cuando administrar una única ruta */
+
 class HomeController extends Controller
 {
     public function __invoke()
